@@ -27,8 +27,7 @@ SECRET_KEY = 'ofm@21ol1nu679d9$hz_gxckgy0!l)3l$x3_e&z*#pgs&62t*f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["jukisite.herokuapp.com"]
-# "127.0.0.1"
+ALLOWED_HOSTS = ["jukisite.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
