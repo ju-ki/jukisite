@@ -1,0 +1,156 @@
+body {
+  background-image: url("/media/img/upload/my_favorite_photo.jpg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+
+.profile img {
+  position: relative;
+  top: 100px;
+  border-radius: 70%;
+}
+
+.comment p {
+  color: rgb(175, 242, 108);
+  font-size: 100px;
+  top: 100px;
+  animation: fadeIn 5s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.follow-me {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+.follow-me li {
+  display: inline-block;
+  margin: 2px 5px 5px 2px;
+  padding: 1px;
+}
+
+.follow-me li a::before {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  width: 100%;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 44px; /* Button height */
+  line-height: 44px; /* Button height */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 44px;
+}
+.follow-me li a:hover::before {
+  opacity: 0.7;
+}
+
+.follow-me li a[href*="facebook.com"]::before {
+  background-color: #3b5998;
+  content: "\f09a";
+}
+.follow-me li a[href*="github.com"]::before {
+  background-color: #181717;
+  content: "\f09b";
+}
+
+.follow-me li a[href*="twitter.com"]::before {
+  background-color: #55acee;
+  content: "\f099";
+}
+
+.follow-me li a[href*="note.com"]::before {
+  background-color: aquamarine;
+  content: "n";
+  font-size: 25px;
+  color: rgb(245, 245, 245);
+}
+
+.follow-me li a[href*="kaggle.com"]::before {
+  background-color: aqua;
+  content: "k";
+  font-size: 25px;
+  color: #3b5998;
+}
+
+.follow-me li a[href*="signate.jp"]::before {
+  background-color: #fff;
+  content: "S";
+  font-size: 25px;
+  color: #181717;
+}
+
+.tab {
+  display: inline-block;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.75em 0.75em 0px 0px;
+  padding: 0.75em 1.5em;
+  margin: 0 auto;
+  font-weight: bold;
+  color: white;
+  background-color: #fc9fee;
+  position: relative;
+}
+.tab:hover {
+  color: white;
+  background-color: pink;
+  cursor: pointer;
+}
+
+input:checked + .tab {
+  color: rgb(52, 52, 52);
+  background-color: pink;
+}
+
+.tab_box input {
+  display: none;
+  margin: 0 auto;
+}
+
+.tabcontent {
+  display: none;
+  border: 1px solid black;
+  padding: 1em 1em;
+  background-color: white;
+}
+
+#tab1:checked ~ #skillcontent {
+  display: block;
+}
+
+#tab2:checked ~ #aboutmecontent {
+  display: block;
+}
+
+#tab3:checked ~ #artcontent {
+  display: block;
+}
+
+input:checked + .tab {
+  z-index: 10;
+  position: relative;
+}
+
+.tabcontent {
+  margin-top: -1px;
+  z-index: 0;
+  position: relative;
+  opacity: 0.8;
+}
+
+.tabcontent ul {
+  list-style: none;
+}
