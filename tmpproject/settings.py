@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary',  # imageを扱うため
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'widget_tweaks',
     'tmpapp.apps.TmpappConfig',
@@ -73,6 +75,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tmpproject.wsgi.application'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Database
@@ -125,3 +129,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / "static"
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dq1ofpv0q',
+    'API_KEY': '614198711518492',
+    'API_SECRET': 'Om6rPXF_ZNWv6q8vpv-ROx-oNwE'
+}
