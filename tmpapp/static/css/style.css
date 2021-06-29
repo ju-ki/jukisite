@@ -14,7 +14,7 @@ body {
   color: rgb(175, 242, 108);
   font-size: 100px;
   top: 100px;
-  animation: fadeIn 5s ease 0s 1 normal;
+  animation: fadeIn 3s ease 0s 1 normal;
 }
 @keyframes fadeIn {
   0% {
