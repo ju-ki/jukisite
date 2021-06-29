@@ -72,22 +72,22 @@ body {
 
 .follow-me li a[href*="note.com"]::before {
   background-color: aquamarine;
-  content: "n";
-  font-size: 25px;
+  content: "Note";
+  font-size: 15px;
   color: rgb(245, 245, 245);
 }
 
 .follow-me li a[href*="kaggle.com"]::before {
   background-color: aqua;
-  content: "k";
-  font-size: 25px;
+  content: "Kaggle";
+  font-size: 10px;
   color: #3b5998;
 }
 
 .follow-me li a[href*="signate.jp"]::before {
   background-color: #fff;
-  content: "S";
-  font-size: 25px;
+  content: "Signate";
+  font-size: 10px;
   color: #181717;
 }
 
