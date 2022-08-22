@@ -1,23 +1,11 @@
 from django.db import models
 # Create your models here.
 
-GENDER = (("man", "male"), ("woman", "female"))
-
-
-class TestModel(models.Model):
-    title = models.CharField(max_length=30, blank=True, null=True)
-    subtitle = models.CharField(max_length=10, blank=True, null=True)
-    name = models.CharField(max_length=10, default="Please input your name")
-    gender = models.CharField(max_length=10, choices=GENDER, blank=True)
-
-    def __str__(self) -> str:
-        return self.title
-
 
 class ImageModel(models.Model):
-    background_image = models.ImageField(upload_to="img/upload")
+    background_image = models.ImageField(upload_to="img/upload", blank=True)
     description = models.TextField(
-        max_length=200, default="This is my favorite photo")
+        max_length=200, default="Welcome to my site!!")
     profile_image = models.ImageField(upload_to="img/upload", blank=True)
     twitter = models.CharField(max_length=100, blank=True)
     github = models.CharField(max_length=100, blank=True)

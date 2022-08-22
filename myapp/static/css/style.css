@@ -1,21 +1,76 @@
-body {
+/* body {
   background-image: url("/media/img/upload/my_favorite_photo.jpg");
   background-size: 100% auto;
   background-repeat: repeat-y;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  float: left;
+  background-color: black;
+  width: max-content;
+  min-height: 100vh;
+}
+
+.profile {
+  background-color: #57a4df;
+  height: auto;
+  width: auto;
 }
 
 .profile img {
-  position: relative;
-  top: 100px;
-  border-radius: 70%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  display: block;
+  /* margin: 0px auto; */
+  padding: 10px 10px 10px 32.5px;
+
 }
 
-.comment p {
-  color: rgb(175, 242, 108);
-  font-size: 100px;
-  top: 100px;
-  animation: fadeIn 3s ease 0s 1 normal;
+.profile p {
+  text-align: center;
+  line-height: 1.5;
 }
+
+.profile h1 {
+  text-align: center;
+  font-size: large;
+  line-height: 1.5;
+}
+
+.page_link {
+  /* position: relative; */
+  background-color: #181717;
+  padding: 15px;
+  line-height: 2.5;
+  background-repeat: repeat-y;
+  /* display: inline-block; */
+}
+
+.page_link h3 {
+  color: rgb(210, 206, 206);
+}
+
+.title h1 {
+  padding-top: 0%;
+  font-size: xx-large;
+  text-align: center;
+  line-height: 200px;
+  color: #000000;
+}
+
+.main {
+  font-size: xx-large;
+  padding-left: 300px;
+  line-height: 200px;
+  color: #000000;
+}
+
+
 
 @keyframes fadeIn {
   0% {
@@ -78,7 +133,7 @@ body {
 
 .follow-me li a[href*="note.com"]::before {
   background-color: aquamarine;
-  content: "Note";
+  content: "note";
   font-size: 15px;
   color: rgb(245, 245, 245);
 }
@@ -92,7 +147,7 @@ body {
 
 .follow-me li a[href*="signate.jp"]::before {
   background-color: #fff;
-  content: "Signate";
+  content: "signate";
   font-size: 10px;
   color: #181717;
 }
@@ -139,6 +194,7 @@ input:checked+.tab {
 }
 
 #tab2:checked~#aboutmecontent {
+  font-size: small;
   display: block;
 }
 
