@@ -59,16 +59,30 @@
   padding-top: 0%;
   font-size: xx-large;
   text-align: center;
-  line-height: 200px;
+  line-height: 175px;
   color: #000000;
 }
 
-.main {
-  font-size: xx-large;
+.title h3 {
   padding-left: 300px;
-  line-height: 200px;
+  transform: translateY(20px);
+}
+
+.news p {
+  text-align: center;
+}
+
+.news h5 {
+  text-align: center;
+}
+
+.main {
+  font-size: large;
+  padding-left: 300px;
+  line-height: 50px;
   color: #000000;
 }
+
 
 
 

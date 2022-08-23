@@ -15,24 +15,43 @@
             <h1><font color="black">Jukiya</font></h1>
         </div>
         <div class="page_link">
-            <h3>自己紹介</h3>
-            <h3>スキル</h3>
-            <h3>今までやってきたこと</h3>
-            <h3>作品</h3>
-            <h3>ブログ</h3>
-            <h3>連絡</h3>
-            <h3>リンク</h3>
+            <a href="{% url 'myapp:introduction' %}"><h3>自己紹介</h3></a>
+            <a href="{% url 'myapp:skill' %}"><h3>スキル</h3></a>
+            <a href="{% url 'myapp:experience' %}"><h3>今までやってきたこと</h3></a>
+            <a href="{% url 'myapp:works' %}"><h3>作品</h3></a>
+            <a href="{% url 'myapp:blog' %}"><h3>ブログ</h3></a>
+            <a href="{% url 'myapp:contact' %}"><h3>連絡</h3></a>
+            <a href="{% url 'myapp:news' %}"><h3>お知らせ</h3></a>
+
         </div>
     </div>
 </head>
 
 <body>
     <div class="title">
+        <a href="{% url 'myapp:home' %}"><h3>HOME</h3></a>
         <h1>ジュキヤのWebサイト</h1>
-    </div>
+        <dive class="news">
+            <p>お知らせ</p>
+            <h5>現時点では最低限の機能しか実装していないので多少汚い部分があります。</h5>
+            <h5>更新内容はお知らせのところに追加していきます</h5>
+        </div>
+    </dive>
     <ul class="main" style="list-style-type: disc">
-        <li><p>このサイトの概略</p></li>
-        <li><p>このサイトの概略2</p></li>
+        <div class="introduction_content", id="aboutmecontent">
+            {% for intro in introduction_data %}
+            <li>
+                <a href="{% url intro.script %}">{{intro.name}}</a>
+            </li>
+            <p>{{ intro.summary | linebreaks }}</p>
+            {% endfor %}
+        </div>
+        {% comment %} <a href="{% url 'myapp:introduction' %}">自己紹介ページへ</a>
+        <a href="{% url 'myapp:skill' %}">スキルページへ</a>
+        <a href="{% url 'myapp:experience' %}">今までやってきたことページへ</a>
+        <a href="{% url 'myapp:contact' %}">連絡先にページへ</a>
+        <a href="{% url 'myapp:blog' %}">ブログページへ</a>
+        <a href="{% url 'myapp:works' %}">作品ページへ</a> {% endcomment %}
     </ul>
 </body>
 
