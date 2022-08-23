@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+{% comment %} {% load cloudinary %} {% endcomment %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/works.css' %}">
+        <title>Jukiyaのサイト</title>
+        <div class="header">
+            <div class="profile">
+                <img src="/media/img/upload/my_favorite_photo.jpg" , alt="profile_icon" , width="150" , height="150">
+                <h1><font color="black">Jukiya</font></h1>
+            </div>
+            <div class="page_link">
+                <a href="{% url 'myapp:introduction' %}"><h3>自己紹介</h3></a>
+                <a href="{% url 'myapp:skill' %}"><h3>スキル</h3></a>
+                <a href="{% url 'myapp:experience' %}"><h3>今までやってきたこと</h3></a>
+                <a href="{% url 'myapp:works' %}"><h3>作品</h3></a>
+                <a href="{% url 'myapp:blog' %}"><h3>ブログ</h3></a>
+                <a href="{% url 'myapp:contact' %}"><h3>連絡</h3></a>
+                <a href="{% url 'myapp:news' %}"><h3>お知らせ</h3></a>
+            </div>
+        </div>
+    </head>
+    <body>
+        <div class="title">
+            <a href="{% url 'myapp:home' %}"><h3>HOME</h3></a>
+            <h1 class="works">作品紹介</h1>
+        </div>
+        {% comment %} <div class="work_content", id="workcontent">
+            {% for work in work_data %}
+            <ul>
+                <li><h3>{{skill.language}}</h3></li>
+                <p>{{ skill.description | linebreaks }}</p>
+            </ul>
+            {% endfor %}
+        </div> {% endcomment %}
+    </body>
+</html>

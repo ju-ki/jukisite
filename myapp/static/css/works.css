@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    float: left;
+    background-color: black;
+    width: max-content;
+    min-height: 100vh;
+}
+
+.profile {
+    background-color: #57a4df;
+    height: auto;
+    width: auto;
+}
+
+.profile img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    display: block;
+    padding: 10px 10px 10px 32.5px;
+
+}
+
+.profile p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.profile h1 {
+    text-align: center;
+    font-size: large;
+    line-height: 1.5;
+}
+
+.page_link {
+    background-color: #181717;
+    padding: 15px;
+    line-height: 2.5;
+    background-repeat: repeat-y;
+}
+
+.page_link h3 {
+    color: rgb(210, 206, 206);
+}
+
+h1 {
+    text-align: center;
+}
+
+.skill_content {
+    padding-left: 225px;
+}
+
+.skill_content li {
+    list-style: none;
+}
+
+.skill_content h3 {
+    padding: 15px;
+    line-height: 1.5;
+}
+
+.skill_content p {
+    padding-left: 20px;
+    font-size: small;
+}
+
+.title h3 {
+    padding-left: 300px;
+    transform: translateY(20px);
+}
