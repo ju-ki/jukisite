@@ -31,8 +31,11 @@
         </div>
         <div class="experience_content", id="experiencecontent">
             {% for exp in experience_data %}
-            <ul>
+            <ul class="exp">
                 <p>{{ exp.summary | linebreaks }}</p>
+                {% if exp.url != ""%}
+                <li><a href={{exp.url}} target="_blank">-> リンク</a><li>
+                {%  endif %}
             </ul>
             {% endfor %}
         </div>
