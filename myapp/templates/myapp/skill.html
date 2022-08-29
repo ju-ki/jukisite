@@ -14,13 +14,13 @@
                 <h1><font color="black">Jukiya</font></h1>
             </div>
             <div class="page_link">
-                <a href="{% url 'myapp:introduction' %}"><h3>自己紹介</h3></a>
-                <a href="{% url 'myapp:skill' %}"><h3>スキル</h3></a>
-                <a href="{% url 'myapp:experience' %}"><h3>今までやってきたこと</h3></a>
-                <a href="{% url 'myapp:works' %}"><h3>作品</h3></a>
-                <a href="{% url 'myapp:blog' %}"><h3>ブログ</h3></a>
-                <a href="{% url 'myapp:contact' %}"><h3>連絡</h3></a>
-                <a href="{% url 'myapp:news' %}"><h3>お知らせ</h3></a>
+                <h3 id="introduction">自己紹介</h3>
+                <h3 id="skill">スキル</h3>
+                <h3 id="experience">今までやってきたこと</h3>
+                <h3 id="works">作品</h3>
+                <h3 id="blog">ブログ</h3>
+                <h3 id="contact">連絡</h3>
+                <h3 id="news">お知らせ</h3>
             </div>
         </div>
     </head>
@@ -32,10 +32,11 @@
         <div class="skill_content", id="skillcontent">
             {% for skill in skill_data %}
             <ul>
-                <li><h3>{{skill.language}}</h3></li>
+                <li><h3>{{skill.language}}&nbsp; &nbsp;{{skill.period}}</h3></li>
                 <p>{{ skill.description | linebreaks }}</p>
             </ul>
             {% endfor %}
         </div>
     </body>
+    <script src="{% static 'javascript/sideBar.js' %}"></script>
 </html>

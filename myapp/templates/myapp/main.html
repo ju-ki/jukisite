@@ -1,114 +1,50 @@
 <!DOCTYPE html>
 {% load static %}
-{% comment %} {% load cloudinary %} {% endcomment %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Jukiyaのサイト</title>
-
-    <div class="header">
-        <div class="profile">
-            <img src="/media/img/upload/my_favorite_photo.jpg" , alt="profile_icon" , width="150" , height="150">
-            <h1><font color="black">Jukiya</font></h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <title>Jukiyaのサイト</title>
+        <div class="header">
+            <div class="profile">
+                <img src="/media/img/upload/my_favorite_photo.jpg" alt="profile_icon" width="150" height="150">
+                <h1 font color="black">Jukiya</h1>
+            </div>
+            <div class="page_link">
+                <h3 id="introduction">自己紹介</h3>
+                <h3 id="skill">スキル</h3>
+                <h3 id="experience">今までやってきたこと</h3>
+                <h3 id="works">作品</h3>
+                <h3 id="blog">ブログ</h3>
+                <h3 id="contact">連絡</h3>
+                <h3 id="news">お知らせ</h3>
+            </div>
         </div>
-        <div class="page_link">
-            <a href="{% url 'myapp:introduction' %}"><h3>自己紹介</h3></a>
-            <a href="{% url 'myapp:skill' %}"><h3>スキル</h3></a>
-            <a href="{% url 'myapp:experience' %}"><h3>今までやってきたこと</h3></a>
-            <a href="{% url 'myapp:works' %}"><h3>作品</h3></a>
-            <a href="{% url 'myapp:blog' %}"><h3>ブログ</h3></a>
-            <a href="{% url 'myapp:contact' %}"><h3>連絡</h3></a>
-            <a href="{% url 'myapp:news' %}"><h3>お知らせ</h3></a>
-
+    </head>
+    <body>
+        <div class="title">
+            <a href="{% url 'myapp:home' %}">
+                <h3>HOME</h3>
+            </a>
+            <h1>ジュキヤのWebサイト</h1>
+            <div class="news">
+                <p>このサイトについて</p>
+                <h5>現時点では最低限の機能しか実装していないので多少汚い部分があります。</h5>
+                <h5>下のボタンから各ページに飛ぶことができますが、左のサイドバーからでも同様に動作します</h5>
+                <h5>更新内容はお知らせのところに追加していきます。</h5>
+            </div>
         </div>
-    </div>
-</head>
-
-<body>
-    <div class="title">
-        <a href="{% url 'myapp:home' %}"><h3>HOME</h3></a>
-        <h1>ジュキヤのWebサイト</h1>
-        <dive class="news">
-            <p>お知らせ</p>
-            <h5>現時点では最低限の機能しか実装していないので多少汚い部分があります。</h5>
-            <h5>更新内容はお知らせのところに追加していきます。</h5>
-        </div>
-    </dive>
-    <ul class="main" style="list-style-type: disc">
-        <div class="introduction_content", id="aboutmecontent">
-            {% for intro in introduction_data %}
-            <li>
-                <a href="{% url intro.script %}">{{intro.name}}</a>
-            </li>
-            <p>{{ intro.summary | linebreaks }}</p>
-            {% endfor %}
-        </div>
-        {% comment %} <a href="{% url 'myapp:introduction' %}">自己紹介ページへ</a>
-        <a href="{% url 'myapp:skill' %}">スキルページへ</a>
-        <a href="{% url 'myapp:experience' %}">今までやってきたことページへ</a>
-        <a href="{% url 'myapp:contact' %}">連絡先にページへ</a>
-        <a href="{% url 'myapp:blog' %}">ブログページへ</a>
-        <a href="{% url 'myapp:works' %}">作品ページへ</a> {% endcomment %}
-    </ul>
-</body>
-
-
-
-    {% comment %} <div class="comment">
-        <center>
-            {% for data in image_data %}
-            <p>{{data.description}}</p>
-            {% endfor %}
-        </center>
-    </div> {% endcomment %}
-
-    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> {% endcomment %}
-
-    {% comment %} <div class="account">
-        <ul class="follow-me">
-            {%for data in image_data %}
-            <li><a href="{{data.twitter}}" , target="_blank"></a></li>
-            <li><a href="{{data.kaggle}}" , target="_blank"></a></li>
-            <li><a href="{{data.github}}" , target="_blank"></a></li>
-            <li><a href="{{data.note}}" , target="_blank"></a></li>
-            <li><a href="{{data.signate}}" , target="_blank"></a></li>
-            {% endfor %}
-        </ul>
-    </div> {% endcomment %}
-    {% comment %} <div class="tab_box">
-        <input type="radio" name="tabset" id="tab1", checked="checked"><label for="tab1", class="tab">Skill</label>
-        <input type="radio" name="tabset" id="tab2"><label for="tab2", class="tab">About me</label>
-        <input type="radio" name="tabset" id="tab3"><label for="tab3" , class="tab">Art</label>
-        <div class="tabcontent", id="skillcontent">
-            <ul>
-                {% for skill in skill_data %}
-                <h4><li>{{skill.language}}({{skill.period}})</li></h4>
-                <p>{{skill.description}}</p>
+        <ul class="main" style="list-style-type: disc">
+            <div class="introduction_content" , id="aboutmecontent">
+                {% for intro in introduction_data %}
+                <li><p>{{ intro.summary | linebreaks }}</p></li>
+                <li><Button id="{{intro.name}}">{{intro.name}}</Button></li>
                 {% endfor %}
-            </ul>
-        </div>
-
-        <div class="tabcontent", id="aboutmecontent">
-            {% for about in about_data %}
-            <h4>[{{about.title}}]</h4>
-            {{ about.description | linebreaks }}
-            {% comment %} <h4>{{about.description}}</h4> {% endcomment %}
-            {% comment %} {% endfor %}
-        </div>
-
-        <div class="tabcontent", id="artcontent">
-            {% for art in art_data %}
-            <h3>{{art.title}}</h3>
-            <h5>{{art.summary}}</h5>
-            <iframe class="note-embed" src="{{art.script}}"
-                style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;"
-                height="200"></iframe>
-            {% endfor %}
-        </div>
-    </div> {% endcomment %} 
-{% comment %} </body> {% endcomment %}
+            </div>
+        </ul>
+    </body>
+    <script src="{% static 'javascript/sideBar.js' %}"></script>
+    <script src="{% static 'javascript/main.js' %}"></script>
 </html>
