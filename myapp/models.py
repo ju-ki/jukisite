@@ -15,19 +15,21 @@ class ImageModel(models.Model):
 
 
 period_choice = (("一ヶ月程度", "一ヶ月程度"), ("二ヶ月から三ヶ月程", "二ヶ月から三ヶ月程"),
-                 ("半年程", "半年程"), ("一年程", "一年程"))
+                 ("半年程", "半年程"), ("一年程", "一年程"), ("一年以上", "一年以上"))
 
 
 class ContactModel(models.Model):
     email = models.EmailField(max_length=50, blank=True)
     twitter = models.CharField(max_length=100, blank=True)
     github = models.CharField(max_length=100, blank=True)
+    kaggle = models.CharField(max_length=100, blank=True)
 
 
 class SkillModel(models.Model):
     language = models.CharField(max_length=20, blank=True)
     period = models.CharField(
         max_length=20, blank=True, choices=period_choice)
+    icon_name = models.CharField(max_length=20, blank=True)
     description = models.TextField(max_length=1000, blank=True)
 
     def __str__(self) -> str:

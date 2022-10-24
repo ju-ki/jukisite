@@ -29,14 +29,15 @@
             <a href="{% url 'myapp:home' %}"><h3>HOME</h3></a>
             <h1 class="skill">スキル紹介</h1>
         </div>
-        <div class="skill_content", id="skillcontent">
-            {% for skill in skill_data %}
-            <ul>
-                <li><h3>{{skill.language}}&nbsp; &nbsp;{{skill.period}}</h3></li>
-                <p>{{ skill.description | linebreaks }}</p>
-            </ul>
-            {% endfor %}
-        </div>
-    </body>
+        <div id="Skill">
+            <div class="skill_content">
+                {%for skill in skill_data%}
+                <div class="my_skill">
+                    <img src="/media/img/upload/skill/{{skill.icon_name}}.svg" class="img_skill", alt="{{skill.icon_name}}">
+                    <p class="language_name">{{skill.language}}</p>
+                    <p class="period">{{skill.period}}</p>
+                    <p class="description">{{skill.description | linebreaksbr}}</p>
+                </div>
+                {%endfor%}
     <script src="{% static 'javascript/sideBar.js' %}"></script>
 </html>

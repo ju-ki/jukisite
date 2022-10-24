@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <title>Jukiyaのサイト</title>
         <div class="header">
             <div class="profile">
@@ -32,9 +33,18 @@
         <div class="contact_content", id="contactacontent">
             {% for contact in contact_data %}
             <ul>
-                <li><p>email: {{contact.email}}</p></li>
-                <li><a href="{{contact.twitter}}">twitter</a></li>
-                <li><a href="{{contact.github}}">github</a></li>
+                <li><a class="twitter" href="{{contact.twitter}}" target="_blank">
+                    <img src="/media/img/upload/twitter.svg">
+                    <p>Twitter</p>
+                </a></li>
+                <li><a class="github" href="{{contact.github}}" target="_blank">
+                    <img src="/media/img/upload/github.svg">
+                    <p>Github</p>
+                </a></li>
+                <li><a class="kaggle" href="{{contact.kaggle}}" target="_blank">
+                    <img src="/media/img/upload/kaggle.svg">
+                    <p>kaggle</p>
+                </a></li>
             {% endfor %}
         </div>
     </body>

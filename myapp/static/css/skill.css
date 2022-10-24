@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  height: 100%;
+}
+
 .header {
   float: left;
   width: -webkit-max-content;
@@ -51,27 +55,39 @@
   text-align: center;
   line-height: 175px;
   color: #000000;
+  transform: translateX(75px);
 }
 .title h3 {
   display: inline-block;
   padding-left: 300px;
-  transform: translateY(20px);
+  transform: translateY(30px);
 }
 .title a {
   text-decoration: none;
 }
 
-.skill_content {
-  padding-left: 225px;
+#Skill {
+  height: 1000px;
 }
-.skill_content li {
-  list-style: none;
+#Skill .my_skill {
+  float: left;
+  text-align: center;
+  transform: translateX(175px);
+  width: 28.5714285714%;
 }
-.skill_content h3 {
-  padding: 15px;
-  line-height: 1.5;
+#Skill .my_skill .language_name {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-.skill_content p {
-  padding-left: 20px;
-  font-size: small;
+#Skill .my_skill .period {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+#Skill .my_skill .description {
+  font-size: 10px;
+  margin-bottom: 50px;
+}
+#Skill .img_skill {
+  height: 125px;
+  width: 125px;
 }/*# sourceMappingURL=skill.css.map */

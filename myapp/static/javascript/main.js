@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
         buttonEvent3.click();
         buttonEvent4.click();
         buttonEvent5.click();
-    }, 1000);
+    }, 0);
 });

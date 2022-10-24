@@ -60,6 +60,7 @@ $cBlack: black;
         text-align: center;
         line-height: 175px;
         color: #000000;
+        transform: translateX(125px);
     }
 
     & h3 {
@@ -76,7 +77,39 @@ $cBlack: black;
 .contact_content {
     padding-left: 225px;
     text-align: center;
-    transform: translateY(200px);
+    transform: translateY(50px);
+    & .twitter img
+    {
+        height: 100px;
+        width: 100px;
+    }
+    & .twitter p
+    {
+        margin-bottom: 50px;
+    }
+    & .github img
+    {
+        height: 100px;
+        width: 100px;
+    }
+    & .github p
+    {
+        margin-bottom: 50px;
+    }
+    & .kaggle img
+    {
+        height: 100px;
+        width: 200px;
+    }
+    & .kaggle p
+    {
+        margin-bottom: 50px;
+    }
+    & .comment {
+        resize: none;
+        height: 160px;
+        width: (100%/2);
+    }
 
     & li {
         list-style: none;

@@ -51,6 +51,7 @@
   text-align: center;
   line-height: 175px;
   color: #000000;
+  transform: translateX(125px);
 }
 .title h3 {
   display: inline-block;
@@ -64,7 +65,33 @@
 .contact_content {
   padding-left: 225px;
   text-align: center;
-  transform: translateY(200px);
+  transform: translateY(50px);
+}
+.contact_content .twitter img {
+  height: 100px;
+  width: 100px;
+}
+.contact_content .twitter p {
+  margin-bottom: 50px;
+}
+.contact_content .github img {
+  height: 100px;
+  width: 100px;
+}
+.contact_content .github p {
+  margin-bottom: 50px;
+}
+.contact_content .kaggle img {
+  height: 100px;
+  width: 200px;
+}
+.contact_content .kaggle p {
+  margin-bottom: 50px;
+}
+.contact_content .comment {
+  resize: none;
+  height: 160px;
+  width: 50%;
 }
 .contact_content li {
   list-style: none;
