@@ -18,7 +18,6 @@ class SideBarController {
             this.elem.style.backgroundColor = "";
         }.bind(this), false);
     }
-    //ゴリ押し実装でとりあえず遷移するようにしている.これよりいいやり方があれば修正
     click() {
         this.elem.addEventListener("click", function () {
             location.href = "https://jukisite.herokuapp.com/" + this.name;
