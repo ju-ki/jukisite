@@ -29,14 +29,12 @@
             <a href="{% url 'myapp:home' %}"><h3>HOME</h3></a>
             <h1 class="works">作品紹介</h1>
         </div>
-        {% comment %} <div class="work_content", id="workcontent">
-            {% for work in work_data %}
-            <ul>
-                <li><h3>{{skill.language}}</h3></li>
-                <p>{{ skill.description | linebreaks }}</p>
-            </ul>
-            {% endfor %}
-        </div> {% endcomment %}
+        <div class="work1">
+            <h3>Typing RPG(予定)</h3>
+            <p>完成予定: 2023/3月頃</p>
+            <h3>使用技術</h3>
+            <p>Unity C#</p>
+            <video class="movie" controls width="600" height="600" src="/media/img/upload/TypingRPG_demo.mp4"></video>
     </body>
     <script src="{% static 'javascript/sideBar.js' %}"></script>
 </html>
