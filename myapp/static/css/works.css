@@ -61,17 +61,6 @@
   text-decoration: none;
 }
 
-.skill_content {
-  padding-left: 225px;
-}
-.skill_content li {
-  list-style: none;
-}
-.skill_content h3 {
-  padding: 15px;
-  line-height: 1.5;
-}
-.skill_content p {
-  padding-left: 20px;
-  font-size: small;
+.work1 {
+  text-align: center;
 }/*# sourceMappingURL=works.css.map */
